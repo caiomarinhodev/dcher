@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dcher.delicious" version="1.0" xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>D'Cher App</name>
+    <description>
+        O App da sua sorveteria predileta, agora disponível para sistema Android!
+        Faça agora o seu pedido via aplicativo.
+    </description>
+    <author email="caiodotdev@gmail.com" href="http://www.caiomarinho.com">
+        Caio Marinho
+    </author>
+
+    <preference name="phonegap-version" value="3.7.0" />
+
+    <gap:plugin name="org.apache.cordova.media" />
+
+    <gap:plugin name="admob" version="5.3.0" source="npm"/>
+
+    <!-- Icones -->
+    <icon src="img/ic_launcher_crop-web.png"/>
+
+    <!-- Android -->
+    <icon src="img/mipmap-mdpi/ic_launcher.png" gap:platform="android" gap:qualifier="ldpi"/>
+    <icon src="img/mipmap-mdpi/ic_launcher.png" gap:platform="android" gap:qualifier="mdpi"/>
+    <icon src="img/mipmap-hdpi/ic_launcher.png" gap:platform="android" gap:qualifier="hdpi"/>
+    <icon src="img/mipmap-xhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xhdpi"/>
+    <icon src="img/mipmap-xxhdpi/ic_launcher.png" gap:platform="android" gap:qualifier="xxhdpi"/>
+
+    <!-- Splash Screens -->
+    <gap:splash src="img/splash.png" />
+
+    <!-- Preferences -->
+    <preference name="orientation" value="portrait"/>
+    <supports-screens android:anyDensity="true" android:resizeable="true"
+                      android:smallScreens="true"
+                      android:normalScreens="true"
+                      android:largeScreens="true"
+                      android:xlargeScreens="true"/>
+
+    <content src="index.html"/>
+    <plugin name="cordova-plugin-whitelist" version="1"/>
+    <access origin="http://dcher.herokuapp.com/" subdomains="true"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+    <platform name="android">
+        <allow-intent href="market:*"/>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
+    </platform>
+</widget>
